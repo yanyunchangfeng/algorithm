@@ -2,6 +2,10 @@ const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 module.exports={
     entry: path.join(__dirname,'src/index.ts'),
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].bundle.js'
+    },
     mode:'development',
     resolve:{
         extensions:['*','.js','.ts']
@@ -9,12 +13,7 @@ module.exports={
     module:{
         rules:[
             {
-                test:/\.js$/,
-                exclude:/node_modules/,
-                loader:'babel-loader'
-            },
-            {
-                test:/\.ts/,
+                test:/\.ts$/,
                 loader:'ts-loader'
             }
         ]
