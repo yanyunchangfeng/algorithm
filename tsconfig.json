@@ -1,0 +1,15 @@
+{
+ "compilerOptions": {
+     "baseUrl": "./",
+     "outDir": "dist",
+     "rootDir": "src",
+     "lib": ["es2017", "dom"],
+     "sourceMap": true,
+     "allowSyntheticDefaultImports": true,
+     "typeRoots": ["node_modules/@types"],
+     "moduleResolution": "node",
+     "noImplicitAny": true,
+     "target": "es5"
+ },
+ "include": ["./src/**/*/"]
+}
