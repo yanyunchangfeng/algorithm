@@ -17,3 +17,4 @@ const insertSort = (arr:any[]):void => {
          arr[p+1] = current //将current的值保存到p+1中
    }
 }
+export default insertSort
