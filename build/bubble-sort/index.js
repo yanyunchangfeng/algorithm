@@ -8,8 +8,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var bubbleSort = function (arr) {
     for (var i = 1; i < arr.length; i++) {
         for (var j = 0; j < arr.length - i; j++) {
-            if (arr[j] > arr[j - 1]) {
-                arr[j] = [arr[j + 1], arr[j + 1] = arr[j]];
+            if (arr[j] > arr[j + 1]) {
+                arr[j] = [arr[j + 1], arr[j + 1] = arr[j]][0];
             }
         }
     }
