@@ -1,7 +1,7 @@
 {
  "compilerOptions": {
      "baseUrl": "./",
-     "outDir": "build",
+     "outDir": "./algorithm",
      "rootDir": "src",
      "lib": ["es2017", "dom"],
      "sourceMap": true,

@@ -1,7 +1,8 @@
+// import  ranNum from '../random-number';
 /** 
  * [quicksort 快速排序算法]
- * @params {object Array} arr [要进行排序的数组]
- * @return  {object Array}[新的排好序的数组]
+ * @param  {[object Array]} arr [要进行排序的数组]
+ * @return {[object Array]}     [新的排好序的数组]
 */
  const quickSort = (arr:any[]):any[] => {
      if(arr.length>1){
@@ -19,3 +20,17 @@
 }
 
 export default quickSort
+
+
+
+// let quickArr:any[] = [];
+
+// for(let i = 0;i < 10000; i++){
+//    quickArr[i] = ranNum(0,1001)
+// }
+
+// unit test quickSort
+// console.time('quickSort')
+// const newArr = quickSort(quickArr);
+// console.log(newArr)
+// console.timeEnd('quickSort') //quickSort: 48.515380859375ms

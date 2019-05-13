@@ -1,7 +1,7 @@
 {
-  "name": "algorithm",
+  "name": "yycfalgorithm",
   "version": "1.0.0",
-  "description": "1.冒泡算法 2.快速排序 3.插入排序",
+  "description": "1.冒泡算法 2.快速排序 3.插入排序,4.质数判定",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitee.com:yanyunchangfeng/algorithm.git"
+    "url": "https://github.com/yanyunchangfeng/algorithm.git"
   },
   "keywords": [],
   "author": "yanyunchangfeng <yanyunchangfeng@gmail.com> (https://github.com/yanyunchangfeng)",
