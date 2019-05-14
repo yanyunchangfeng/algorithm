@@ -1,8 +1,8 @@
 {
-  "name": "yycfalgorithm",
+  "name": "algorithm",
   "version": "1.0.0",
-  "description": "1.冒泡算法 2.快速排序 3.插入排序,4.质数判定",
-  "main": "index.js",
+  "description": "1.冒泡算法 2.快速排序 3.插入排序,4数组去重,5.质数判定,6.生成随机数",
+  "main": "src/index.ts",
   "dependencies": {},
   "devDependencies": {
     "html-webpack-plugin": "3.2.0",

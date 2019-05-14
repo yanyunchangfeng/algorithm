@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="150" src="./src/img/yanyunchangfeng.png">
+    <img width="300" src="./src/img/yanyunchangfeng.png">
 </p>
 
 ##  介绍
@@ -14,51 +14,49 @@
 
 3. [插入排序](src/insert-sort/index.ts)
 
-4. [质数判定](src/memory-function/index.ts)
+4. [质数判定](src/is-prime/index.ts)
 
 5. [数组去重](src/unique/index.ts)
 
-6. [生成随机数](sr/random-number/index.ts)
+6. [生成随机数](src/random-number/index.ts)
 
 ## 安装
 ```
-   npm  install yycfalgorithm
+   npm  install yycf-algorithm
 ```
 ## 使用
 
 ```
  1. 以对象方式引入所有方法
- import algorithm from 'yycfalgorithm/algorithm';
+ import algorithm from 'yycf-algorithm/algorithm';
 
   algorithm.bubbleSort();
   algorithm.insertSort();
   algorithm.quickSort();
   algorithm.unique();
   algorithm.isPrime();
-  algorithm.isMemoryPrime();
   algorithm.ranNum();
 
  2.按需引入
 
- import bubbleSort from 'yycfalgorithm/algorithm/bubblesort';
- import quickSort  from 'yycfalgorithm/algorithm/quickSort';
- import insertSort from 'yycfalgorithm/algorithm/insertSort';
- import unique     from 'yycfalgorithm/algorithm/unique';
- import memoryFn   from 'yycfalgorithm/algorithm/memory-function';
- import ranNum     from 'yycfalgorithm/algorithm/random-number';
+ import bubbleSort from 'yycf-algorithm/algorithm/bubble-sort';
+ import quickSort  from 'yycf-algorithm/algorithm/quick-sort';
+ import insertSort from 'yycf-algorithm/algorithm/insert-sort';
+ import unique     from 'yycf-algorithm/algorithm/unique';
+ import isPrime    from 'yycf-algorithm/algorithm/is-prime';
+ import ranNum     from 'yycf-algorithm/algorithm/random-number';
 
  bubbleSort();
  quickSort();
  insertSort();
  unique();
- memoryFn.isPrime();
- memoryFn.isMemoryPrime();
+ isPrime();
  ranNum();
 
 ```
 ## 我参与的系列项目
 
-* NiceFish：美人鱼，这是一个微型Blog系统，前端基于Angular7.0 + PrimeNG7.1.0。http://git.oschina.net/mumu-osc/NiceFish/
+* NiceFish：美人鱼，这是一个微型Blog系统，前端基于Angular7.0 + PrimeNG7.1.0。https://gitee.com/mumu-osc/NiceFish
 * NiceFish-React：这是React版的实现，界面外观完全相同。
   采用React Hooks 16.8.3 版本，使用TypeScript、Ant Design组件库以及Bootstrap v4.2.1 开发。https://gitee.com/mumu-osc/NiceFish-React
 * OpenWMS-Frontend： OpenWMS项目前端基于 Angular 7.0 + PrimeNG 7.1.0。https://gitee.com/mumu-osc/OpenWMS-Frontend
@@ -70,7 +68,7 @@ MIT
 
 ## 我的社交主页
 
-1. [燕云长风知乎专栏](https://zhuanlan.zhihu.com/yanyunchangfeng)  
+1. [燕云长风知乎专栏](https://zhuanlan.zhihu.com.yanyunchangfeng)  
 2. [燕云长风知乎](https://zhihu.com/people/hbxyxuxiaodong)  
 3. [燕云长风Github](https://github.com/yanyunchangfeng)  
 4. [燕云长风Gitee](https://gitee.com/yanyunchangfeng)  

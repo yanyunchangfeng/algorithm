@@ -3,8 +3,7 @@ declare const _default: {
     quickSort: (arr: any[]) => any[];
     insertSort: (arr: any[]) => void;
     unique: (arr: any[]) => any[];
-    ranNum: (min: number, max: number) => number;
     isPrime: (num: number) => boolean;
-    isMemoryPrime: (num: number) => boolean;
+    ranNum: (min: number, max: number) => number;
 };
 export default _default;

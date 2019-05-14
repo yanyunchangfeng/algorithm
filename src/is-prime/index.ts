@@ -1,4 +1,4 @@
-import ranNum from "../random-number";
+// import ranNum from "../random-number";
 
   /*函数记忆: 让函数记住曾经处理过的参数及其对应的处理结果
   * 为什么： 避免重复计算
@@ -7,12 +7,12 @@ import ranNum from "../random-number";
   *       关联数组中保存曾经计算过的参数和处理结果*/
 
 /**   
- * [isPrime 判断是否为质数的方法]
+ * [basicIsPrime 判断是否为质数的方法]
  * @param  {number} num [传入的参数]
  * @return {boolean}  
 */
 
-const isPrime = (num:number) => {
+const basicIsPrime = (num:number):boolean => {
    if(num <= 3)return true
    else{
        for(let i = 2;i < Math.sqrt(num); i++){
@@ -23,14 +23,14 @@ const isPrime = (num:number) => {
 }
 
 /**  
- * [isMemoryPrime 带有记忆功能的判断质数方法]
+ * [isPrime 带有记忆功能的判断质数方法]
  * @params {number} num 传入的参数
  * @return {boolean} 
 */
 
-const isMemoryPrime =(()=>{
+const isPrime =(()=>{
      let hash:any[] = [];
-     return (num:number) => {
+     return (num:number):boolean => {
          if(num <= 3) return true
          else if(hash[num]!== undefined){
              return true
@@ -45,29 +45,26 @@ const isMemoryPrime =(()=>{
          }
      }
 })()
-export default{
-    isPrime,
-    isMemoryPrime
-}
+export default isPrime
 
 
- let resArr:any [] = [];
-for(let i = 0; i<1000000;i++){
-    resArr[i] = ranNum(0,1001)
-}
+// let resArr:any [] = [];
+// for(let i = 0; i<1000000;i++){
+//     resArr[i] = ranNum(0,1001)
+// }
+
+// unit test basicIsPrime
+// console.time('basicIsPrime')
+// for(let i = 0; i < resArr.length;i++){
+//     basicIsPrime(resArr[i]);
+// }
+// console.timeEnd('basicIsPrime') //basicIsPrime: 37.343017578125ms
 
 // unit test isPrime
+
 // console.time('isPrime')
+
 // for(let i = 0; i < resArr.length;i++){
 //     isPrime(resArr[i]);
 // }
-// console.timeEnd('isPrime') //isPrime: 39.343017578125ms
-
-// // unit test isMemoryPrime
-
-// console.time('isMemoryPrime')
-
-// for(let i = 0; i < resArr.length;i++){
-//     isMemoryPrime(resArr[i]);
-// }
-// console.timeEnd('isMemoryPrime')   //isMemoryPrime: 34.153076171875ms
+// console.timeEnd('isPrime')   //isPrime: 30.153076171875ms
