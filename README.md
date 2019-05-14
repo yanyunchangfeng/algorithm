@@ -18,6 +18,8 @@
 
 5. [数组去重](src/unique/index.ts)
 
+5. [日历算法](src/calendar-algorithm/index.ts)
+
 6. [生成随机数](src/random-number/index.ts)
 
 ## 安装
@@ -35,22 +37,25 @@
   algorithm.quickSort();
   algorithm.unique();
   algorithm.isPrime();
+  algorithm.getMonthData();
   algorithm.ranNum();
 
  2.按需引入
 
- import bubbleSort from 'yycf-algorithm/algorithm/bubble-sort';
- import quickSort  from 'yycf-algorithm/algorithm/quick-sort';
- import insertSort from 'yycf-algorithm/algorithm/insert-sort';
- import unique     from 'yycf-algorithm/algorithm/unique';
- import isPrime    from 'yycf-algorithm/algorithm/is-prime';
- import ranNum     from 'yycf-algorithm/algorithm/random-number';
+ import bubbleSort   from 'yycf-algorithm/algorithm/bubble-sort';
+ import quickSort    from 'yycf-algorithm/algorithm/quick-sort';
+ import insertSort   from 'yycf-algorithm/algorithm/insert-sort';
+ import unique       from 'yycf-algorithm/algorithm/unique';
+ import isPrime      from 'yycf-algorithm/algorithm/is-prime';
+ import getMonthData from 'yycf-algorithm/algorithm/calendar-algorithm';
+ import ranNum       from 'yycf-algorithm/algorithm/random-number';
 
  bubbleSort();
  quickSort();
  insertSort();
  unique();
  isPrime();
+ getMonthData();
  ranNum();
 
 ```

@@ -4,6 +4,7 @@ declare const _default: {
     insertSort: (arr: any[]) => void;
     unique: (arr: any[]) => any[];
     isPrime: (num: number) => boolean;
+    getMonthData: (year?: number, month?: number) => import("./calendar-algorithm").DateRet[];
     ranNum: (min: number, max: number) => number;
 };
 export default _default;

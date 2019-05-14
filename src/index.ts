@@ -4,6 +4,7 @@ import insertSort from './insert-sort';
 import ranNum from './random-number';
 import isPrime from './is-prime'
 import unique from './unique';
+import getMonthData from './calendar-algorithm'
 
 export default {
     bubbleSort,
@@ -11,5 +12,6 @@ export default {
     insertSort,
     unique,
     isPrime,
+    getMonthData,
     ranNum
 }
