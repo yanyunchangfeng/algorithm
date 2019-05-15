@@ -4,7 +4,7 @@
 
 ##  介绍
 你好，我是徐晓东，笔名燕云长风。大漠穷秋于 2019-03-16 21:22 赠此笔名。   
-寓意：结合李白著名的边塞诗《关山月》取 【燕云长风】 — 长风几万里，吹度玉门关。
+寓意：结合李白著名的边塞诗《关山月》取【燕云长风】———— 长风几万里，吹度玉门关。
 
 这是一系列的算法题，如下:
 
@@ -84,7 +84,7 @@ MIT
 
 ## 我的社交主页
 
-1. [燕云长风知乎专栏](https://zhuanlan.zhihu.com.yanyunchangfeng)  
+1. [燕云长风知乎专栏](https://zhuanlan.zhihu.com/yanyunchangfeng)  
 2. [燕云长风知乎](https://zhihu.com/people/hbxyxuxiaodong)  
 3. [燕云长风Github](https://github.com/yanyunchangfeng)  
 4. [燕云长风Gitee](https://gitee.com/yanyunchangfeng)  
