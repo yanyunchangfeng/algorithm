@@ -22,6 +22,10 @@
 
 6. [生成随机数](src/random-number/index.ts)
 
+7. [颜色轮训算法](src/color-util/index.ts)
+
+7. [类的多重继承](src/multi-inherit/index.ts)
+
 ## 安装
 ```
    npm  install yycf-algorithm
@@ -38,7 +42,9 @@
   algorithm.unique();
   algorithm.isPrime();
   algorithm.getMonthData();
-  algorithm.ranNum();
+  algorithm.genColor();
+  algorithm.copyProperities();
+  algorithm.mix();
 
  2.按需引入
 
@@ -48,6 +54,8 @@
  import unique       from 'yycf-algorithm/algorithm/unique';
  import isPrime      from 'yycf-algorithm/algorithm/is-prime';
  import getMonthData from 'yycf-algorithm/algorithm/calendar-algorithm';
+ import color        from 'yycf-algorithm/algorithm/color-util';
+ import multiInherit from 'yycf-algorithm/algorithm/multi-inherit';
  import ranNum       from 'yycf-algorithm/algorithm/random-number';
 
  bubbleSort();
@@ -56,16 +64,19 @@
  unique();
  isPrime();
  getMonthData();
+ color.genColor();
+ multiInherit.copyProperties();
+ multiInherit.mix();
  ranNum();
 
 ```
 ## 我参与的系列项目
 
-* NiceFish：美人鱼，这是一个微型Blog系统，前端基于Angular7.0 + PrimeNG7.1.0。https://gitee.com/mumu-osc/NiceFish
+* NiceFish：美人鱼，这是一个微型Blog系统，前端基于Angular7.0 + PrimeNG7.1.0。 https://gitee.com/mumu-osc/NiceFish
 * NiceFish-React：这是React版的实现，界面外观完全相同。
-  采用React Hooks 16.8.3 版本，使用TypeScript、Ant Design组件库以及Bootstrap v4.2.1 开发。https://gitee.com/mumu-osc/NiceFish-React
-* OpenWMS-Frontend： OpenWMS项目前端基于 Angular 7.0 + PrimeNG 7.1.0。https://gitee.com/mumu-osc/OpenWMS-Frontend
-* nicefish-spring-cloud: https://gitee.com/mumu-osc/nicefish-spring-cloud ，这是NiceFish的服务端代码，基于SpringCloud。已经完成了一些基本的功能，如 SpringSecurity+OAuth2+JWT 实现SSO，文章、用户、评论等的分页查询等。如果你需要与这个后端代码进行对接，请检出本项目的 for-spring-cloud 分支。
+  采用React Hooks 16.8.3 版本，使用TypeScript、Ant Design组件库以及Bootstrap v4.2.1 开发。 https://gitee.com/mumu-osc/NiceFish-React
+* OpenWMS-Frontend： OpenWMS项目前端基于 Angular 7.0 + PrimeNG 7.1.0。 https://gitee.com/mumu-osc/OpenWMS-Frontend
+* nicefish-spring-cloud： https://gitee.com/mumu-osc/nicefish-spring-cloud ，这是NiceFish的服务端代码，基于SpringCloud。已经完成了一些基本的功能，如 SpringSecurity+OAuth2+JWT 实现SSO，文章、用户、评论等的分页查询等。如果你需要与这个后端代码进行对接，请检出本项目的 for-spring-cloud 分支。
 
 ## 开源许可证
 

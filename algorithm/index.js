@@ -7,6 +7,8 @@ var random_number_1 = require("./random-number");
 var is_prime_1 = require("./is-prime");
 var unique_1 = require("./unique");
 var calendar_algorithm_1 = require("./calendar-algorithm");
+var color_util_1 = require("./color-util");
+var multi_inherit_1 = require("./multi-inherit");
 exports.default = {
     bubbleSort: bubble_sort_1.default,
     quickSort: quick_sort_1.default,
@@ -14,6 +16,9 @@ exports.default = {
     unique: unique_1.default,
     isPrime: is_prime_1.default,
     getMonthData: calendar_algorithm_1.default,
-    ranNum: random_number_1.default
+    ranNum: random_number_1.default,
+    genColor: color_util_1.default.genColor,
+    copyProperties: multi_inherit_1.default.copyProperties,
+    mix: multi_inherit_1.default.mix
 };
 //# sourceMappingURL=index.js.map

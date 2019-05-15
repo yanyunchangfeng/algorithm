@@ -1,7 +1,7 @@
 {
   "name": "algorithm",
-  "version": "3.0.0",
-  "description": "1.冒泡算法 2.快速排序 3.插入排序,4数组去重,5.质数判定,6.日历算法,7.生成随机数",
+  "version": "5.0.0",
+  "description": "1.冒泡算法 2.快速排序 3.插入排序,4数组去重,5.质数判定,6.日历算法,7.颜色轮训算法,8.类的多重继承 9.生成随机数",
   "main": "src/index.ts",
   "dependencies": {},
   "devDependencies": {
@@ -13,7 +13,7 @@
     "webpack-dev-server": "3.3.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development"
+    "start": "webpack-dev-server --config ./webpack.config.js"
   },
   "repository": {
     "type": "git",
