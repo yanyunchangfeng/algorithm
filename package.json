@@ -1,25 +1,33 @@
 {
-  "name": "algorithm",
+  "name": "yycf-algorithm",
   "version": "9.0.0",
   "description": "1.冒泡算法 2.快速排序 3.插入排序,4数组去重,5.质数判定,6.日历算法,7.颜色轮训算法,8.类的多重继承 9.生成随机数",
-  "main": "src/index.ts",
+  "main": "algorithm/index.js",
   "dependencies": {},
   "devDependencies": {
+    "@types/jest": "24.0.13",
     "html-webpack-plugin": "3.2.0",
+    "jest": "24.8.0",
+    "ts-jest": "24.0.2",
     "ts-loader": "6.0.0",
     "typescript": "3.4.5",
     "webpack": "4.30.0",
     "webpack-cli": "3.3.2",
-    "webpack-dev-server": "3.3.1"
+    "webpack-dev-server": "3.3.1",
+    "webpack-merge": "4.2.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js"
+    "start": "webpack-dev-server --env=dev ",
+    "test":"jest --config=config/jest.config.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/yanyunchangfeng/algorithm.git"
   },
-  "keywords": ["yycf","algorithm"],
+  "keywords": [
+    "yycf",
+    "algorithm"
+  ],
   "author": "yanyunchangfeng <yanyunchangfeng@gmail.com> (https://github.com/yanyunchangfeng)",
   "license": "MIT"
 }

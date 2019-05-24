@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// import ranNum from '../random-number'
 /**
  * [insertSort 插入排序算法]
  * @param {[object Array]} arr [要进行排序的数组]
@@ -22,13 +21,4 @@ var insertSort = function (arr) {
     }
 };
 exports.default = insertSort;
-// let insertArr:any[] = [];
-// for(let i = 0;i < 10000; i++){
-//    insertArr[i] = ranNum(0,1001)
-// }
-// // unit test insertSort
-// console.time('insertSort')
-// insertSort(insertArr);
-// console.log(insertArr)
-// console.timeEnd('insertSort') // 30.55908203125ms
 //# sourceMappingURL=index.js.map

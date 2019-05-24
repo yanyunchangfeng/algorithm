@@ -1,6 +1,4 @@
-// import ranNum from "../random-number";
-
-  /*函数记忆: 让函数记住曾经处理过的参数及其对应的处理结果
+/*函数记忆: 让函数记住曾经处理过的参数及其对应的处理结果
   * 为什么： 避免重复计算
   * 何时： 只要一个函数，有可能处理大量重复的数据时
   * 如何: 利用闭包，为函数添加一个受保护的关联数组
@@ -47,24 +45,3 @@ const isPrime =(()=>{
 })()
 export default isPrime
 
-
-// let resArr:any [] = [];
-// for(let i = 0; i<1000000;i++){
-//     resArr[i] = ranNum(0,1001)
-// }
-
-// unit test basicIsPrime
-// console.time('basicIsPrime')
-// for(let i = 0; i < resArr.length;i++){
-//     basicIsPrime(resArr[i]);
-// }
-// console.timeEnd('basicIsPrime') //basicIsPrime: 37.343017578125ms
-
-// unit test isPrime
-
-// console.time('isPrime')
-
-// for(let i = 0; i < resArr.length;i++){
-//     isPrime(resArr[i]);
-// }
-// console.timeEnd('isPrime')   //isPrime: 30.153076171875ms

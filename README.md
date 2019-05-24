@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="300" src="./src/img/yanyunchangfeng.png">
+    <img width="300" src="src/assets/img/yanyunchangfeng.png">
 </p>
 
 ##  介绍
@@ -8,24 +8,32 @@
 
 这是一系列的算法题，如下:
 
-1. [冒泡算法](src/bubble-sort/index.ts)   
+1. [冒泡算法](src/app/bubble-sort/index.ts)   
 
-2. [快速排序](src/quick-sort/index.ts) 
+2. [快速排序](src/app/quick-sort/index.ts) 
 
-3. [插入排序](src/insert-sort/index.ts)
+3. [插入排序](src/app/insert-sort/index.ts)
 
-4. [质数判定](src/is-prime/index.ts)
+4. [质数判定](src/app/is-prime/index.ts)
 
-5. [数组去重](src/unique/index.ts)
+5. [数组去重](src/app/unique/index.ts)
 
-5. [日历算法](src/calendar-algorithm/index.ts)
+5. [日历算法](src/app/calendar-algorithm/index.ts)
 
-6. [生成随机数](src/random-number/index.ts)
+6. [生成随机数](src/app/random-number/index.ts)
 
-7. [颜色轮训算法](src/color-util/index.ts)
+7. [颜色轮训算法](src/app/color-util/index.ts)
 
-7. [类的多重继承](src/multi-inherit/index.ts)
+7. [类的多重继承](src/app/multi-inherit/index.ts)
 
+## 下载
+```
+  git clone  https://github.com/yanyunchangfeng/algorithm.git
+```
+## 测试
+``` 
+   npm t  or   yarn test
+```
 ## 安装
 ```
    npm  install yycf-algorithm

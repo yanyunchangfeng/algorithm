@@ -1,5 +1,6 @@
 # .npmignore 
 src
+config
 .gitignore
 tsconfig.json
 webpack.config.js

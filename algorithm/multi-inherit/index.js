@@ -33,40 +33,6 @@ var mix = function () {
     }
     return Mix;
 };
-// class Base{
-//     constructor(){}
-// }
-// class Claculate{
-//     constructor(){}
-// }
-// class Interface{
-//     constructor(){}
-// }
-// class Timer{
-//     constructor(){}
-// }
-//类的多重继承实例
-// class App extends mix(Base,Claculate,Interface,Timer){
-//     constructor(name="sys",cname='应用',issue='**',state="**"){
-//         super();
-//         this.name = name;
-//         this.cname = cname;
-//         this.issue = issue;
-//         this.el = '';
-//         this.omit = new Map();
-//         this.open_code = new Set();
-//         this.open_code_list = new Set();
-//         this.play_list = new Map();
-//         this.number = new Set();
-//         this.issue_el = '#curr_issue';
-//         this.countdown_el = '#'
-//         this.state_el = '.state_el';
-//         this.cur_play = 'r5';
-//         this.initNumber();
-//         this.updateState();
-//         this.initEvent();
-//     }
-// }
 exports.default = {
     copyProperties: copyProperties,
     mix: mix
