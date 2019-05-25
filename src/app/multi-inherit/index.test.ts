@@ -1,44 +1,44 @@
-import inherit from './index';
-test('bubbleSort', () => {
+import inherit from "./index";
+test("bubbleSort", () => {
     const mix = inherit.mix;
     class Base {
         constructor() { }
-        base() {
+        public base() {
 
         }
     }
     class Claculate {
         constructor() { }
-        calculate() { }
+        public calculate() { }
     }
     class Interface {
         constructor() { }
-        inter() { }
+        public inter() { }
     }
     class Timer {
         constructor() { }
-        timer() { }
+        public timer() { }
     }
     //    类的多重继承实例
     class App extends mix(Base, Claculate, Interface, Timer) {
-        constructor(name = "sys", cname = '应用', issue = '**', state = "**") {
+        constructor(name = "sys", cname = "应用", issue = "**", state = "**") {
             super();
             this.name = name;
             this.cname = cname;
             this.issue = issue;
-            this.el = '';
+            this.el = "";
             this.omit = new Map();
             this.open_code = new Set();
             this.open_code_list = new Set();
             this.play_list = new Map();
             this.number = new Set();
-            this.issue_el = '#curr_issue';
-            this.countdown_el = '#'
-            this.state_el = '.state_el';
-            this.cur_play = 'r5';
+            this.issue_el = "#curr_issue";
+            this.countdown_el = "#";
+            this.state_el = ".state_el";
+            this.cur_play = "r5";
         }
     }
-    let app = new App();
-    expect(app.timer).toBeDefined
-})
+    const app = new App();
+    expect(app.timer).toBeDefined;
+});
 

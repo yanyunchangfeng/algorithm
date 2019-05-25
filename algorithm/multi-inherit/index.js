@@ -9,13 +9,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var copyProperties = function (target, source) {
     for (var _i = 0, _a = Reflect.ownKeys(source); _i < _a.length; _i++) {
         var key = _a[_i];
-        if (key !== 'constructor' && key !== 'prototype' && key !== 'name') {
+        if (key !== "constructor" && key !== "prototype" && key !== "name") {
             var desc = Object.getOwnPropertyDescriptor(source, key);
             Object.defineProperty(target, key, desc);
         }
     }
 };
-//类的多重继承方法
+// 类的多重继承方法
 var mix = function () {
     var mixins = [];
     for (var _i = 0; _i < arguments.length; _i++) {
@@ -35,6 +35,6 @@ var mix = function () {
 };
 exports.default = {
     copyProperties: copyProperties,
-    mix: mix
+    mix: mix,
 };
 //# sourceMappingURL=index.js.map

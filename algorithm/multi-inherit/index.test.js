@@ -14,7 +14,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var index_1 = require("./index");
-test('bubbleSort', function () {
+test("bubbleSort", function () {
     var mix = index_1.default.mix;
     var Base = /** @class */ (function () {
         function Base() {
@@ -46,23 +46,23 @@ test('bubbleSort', function () {
         __extends(App, _super);
         function App(name, cname, issue, state) {
             if (name === void 0) { name = "sys"; }
-            if (cname === void 0) { cname = '应用'; }
-            if (issue === void 0) { issue = '**'; }
+            if (cname === void 0) { cname = "应用"; }
+            if (issue === void 0) { issue = "**"; }
             if (state === void 0) { state = "**"; }
             var _this = _super.call(this) || this;
             _this.name = name;
             _this.cname = cname;
             _this.issue = issue;
-            _this.el = '';
+            _this.el = "";
             _this.omit = new Map();
             _this.open_code = new Set();
             _this.open_code_list = new Set();
             _this.play_list = new Map();
             _this.number = new Set();
-            _this.issue_el = '#curr_issue';
-            _this.countdown_el = '#';
-            _this.state_el = '.state_el';
-            _this.cur_play = 'r5';
+            _this.issue_el = "#curr_issue";
+            _this.countdown_el = "#";
+            _this.state_el = ".state_el";
+            _this.cur_play = "r5";
             return _this;
         }
         return App;

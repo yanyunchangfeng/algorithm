@@ -6,19 +6,19 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 var baseColor = [
-    '#25859e',
-    '#6acece',
-    '#e78816',
-    '#eabc7f',
-    '#12619d',
-    '#ad2532',
-    '#15938d',
-    '#b3aa9b',
-    '#042d4c'
+    "#25859e",
+    "#6acece",
+    "#e78816",
+    "#eabc7f",
+    "#12619d",
+    "#ad2532",
+    "#15938d",
+    "#b3aa9b",
+    "#042d4c"
 ];
 var genColor = function (arr) {
     var color = [];
-    var num = 0; //指定从哪一个颜色下标处开始轮训
+    var num = 0; // 指定从哪一个颜色下标处开始轮训
     for (var i = 0; i < arr.length; i++) {
         if (num < baseColor.length) {
             color[i] = baseColor[num++];
@@ -32,6 +32,6 @@ var genColor = function (arr) {
 };
 exports.default = {
     baseColor: baseColor,
-    genColor: genColor
+    genColor: genColor,
 };
 //# sourceMappingURL=index.js.map

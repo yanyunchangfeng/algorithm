@@ -1,11 +1,10 @@
 "use strict";
-// import ranNum from "../random-number";
-Object.defineProperty(exports, "__esModule", { value: true });
 /**
-  * [bubbleSort 冒泡排序算法]
-  * @param  {[object Array]} arr    [要进行排序的数组]
-  * return {void}
-  */
+ * [bubbleSort 冒泡排序算法]
+ * @param  {[object Array]} arr    [要进行排序的数组]
+ * return {void}
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
 var basicBubbleSort = function (arr) {
     for (var i = 1; i < arr.length; i++) {
         for (var j = 0; j < arr.length - i; j++) {
@@ -34,20 +33,4 @@ var bubbleSort = function (arr) {
     }
 };
 exports.default = bubbleSort;
-// let basicBubbleArr:any[] = [],bubbleArr:any[] = [];
-// for(let i = 0;i < 10000; i++){
-//    basicBubbleArr[i] = ranNum(0,1001);
-//    bubbleArr[i] = ranNum(0,1001);
-// }
-// unit test basicBubbleSort
-// console.time('basicBubbleSort')
-// basicBubbleSort(basicBubbleArr);
-// console.log(basicBubbleArr)
-// console.timeEnd('basicBubbleSort') // bubbleSort: 156.927978515625ms
-// unit test bubbleSort
-// console.time('bubbleSort')
-// // console.log(bubbleArr1)`
-// bubbleSort(bubbleArr);
-// console.log(bubbleArr)
-// console.timeEnd('bubbleSort') // bubbleSort: 108.702880859375ms
 //# sourceMappingURL=index.js.map

@@ -1,12 +1,12 @@
-import bubbleSort from './bubble-sort';
-import quickSort from './quick-sort';
-import insertSort from './insert-sort';
-import ranNum from './random-number';
-import isPrime from './is-prime'
-import unique from './unique';
-import getMonthData from './calendar-algorithm';
-import color from './color-util';
-import multiInherit from './multi-inherit'
+import bubbleSort from "./bubble-sort";
+import getMonthData from "./calendar-algorithm";
+import color from "./color-util";
+import insertSort from "./insert-sort";
+import isPrime from "./is-prime";
+import multiInherit from "./multi-inherit";
+import quickSort from "./quick-sort";
+import ranNum from "./random-number";
+import unique from "./unique";
 export default {
     bubbleSort,
     quickSort,
@@ -15,7 +15,7 @@ export default {
     isPrime,
     getMonthData,
     ranNum,
-    genColor:color.genColor,
-    copyProperties:multiInherit.copyProperties,
-    mix:multiInherit.mix
-}
+    genColor: color.genColor,
+    copyProperties: multiInherit.copyProperties,
+    mix: multiInherit.mix,
+};
