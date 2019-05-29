@@ -3,5 +3,6 @@ src
 config
 .gitignore
 tsconfig.json
+tslint.json
 webpack.config.js
 *.map

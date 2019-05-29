@@ -1,13 +1,17 @@
 {
-  "name": "algorithm",
-  "version": "9.2.0",
+  "name": "yycfalgorithm",
+  "version": "9.3.0",
   "description": "1.冒泡算法 2.快速排序 3.插入排序,4数组去重,5.质数判定,6.日历算法,7.颜色轮训算法,8.类的多重继承 9.生成随机数",
-  "main": "src/app/index.ts",
+  "main": "src/index.ts",
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "24.0.13",
+    "clean-webpack-plugin": "2.0.2",
     "html-webpack-plugin": "3.2.0",
     "jest": "24.8.0",
+    "mini-css-extract-plugin": "0.7.0",
+    "optimize-css-assets-webpack-plugin": "5.0.1",
+    "terser-webpack-plugin": "1.3.0",
     "ts-jest": "24.0.2",
     "ts-loader": "6.0.0",
     "tslint": "5.16.0",
@@ -19,9 +23,10 @@
   },
   "scripts": {
     "start": "webpack-dev-server --env=dev ",
+    "build": "webpack --env=prod ",
     "test": "jest --config=config/jest.config.js",
     "lint": "tslint -p tsconfig.json",
-    "fix":"tslint --force --fix -p tsconfig.json"
+    "fix": "tslint --force --fix -p tsconfig.json"
   },
   "repository": {
     "type": "git",
