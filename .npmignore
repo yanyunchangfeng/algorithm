@@ -1,6 +1,7 @@
 # .npmignore 
 src
 config
+docs
 .gitignore
 tsconfig.json
 tslint.json
