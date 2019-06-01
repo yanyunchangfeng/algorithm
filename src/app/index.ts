@@ -76,3 +76,8 @@ var arr:any = [11,[33,44,55,66]];
 arr  = Array.prototype.concat.apply([],arr);
 console.log(arr)
 console.log(Math.max.apply(NaN,arr))
+
+
+for(var i =0; i<=3;i++){
+    setTimeout((function(a){ return ()=>{console.log(a)}})(i),0)
+}
