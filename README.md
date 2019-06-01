@@ -88,7 +88,7 @@
 ### 具体配置参数文档 请参照官网：  
 * https://jestjs.io/docs/en/configuration.html
 
-### 运行测试
+### 运行unit测试
 ```
 npm t  or yarn test
 ```
@@ -134,7 +134,7 @@ npm t  or yarn test
    touch {your_project}/cypress/integration/sample_spec.(j|t)s
 ```
 
-### 打开测试,选择指定文件进行e2e测试 
+### 运行e2e测试,选择指定文件进行测试 
 ```
     npm run cypress:open
 ```
@@ -142,10 +142,6 @@ npm t  or yarn test
 ### 具体配置参数文档 请参照官网：  
 * https://docs.cypress.io/guides/getting-started/installing-cypress.html#System-requirements
 
-### 运行测试
-```
-npm t  or yarn test
-```
 
 ## 我的个人博客  
 
