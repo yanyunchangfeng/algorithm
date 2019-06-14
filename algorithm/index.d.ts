@@ -3,6 +3,7 @@ declare const _default: {
     quickSort: (arr: any[]) => any[];
     insertSort: (arr: any[]) => void;
     unique: (arr: any[]) => any[];
+    deepClone: (obj: object) => any;
     isPrime: (num: number) => boolean;
     getMonthData: (year?: number, month?: number) => import("./calendar-algorithm").DateRet[];
     ranNum: (min: number, max: number) => number;

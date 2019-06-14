@@ -3,7 +3,9 @@ src
 config
 docs
 .gitignore
+.gitattributes
 tsconfig.json
 tslint.json
+cypress.json
 webpack.config.js
 *.map

@@ -9,5 +9,4 @@ var deepClone = function (obj) {
     return JSON.parse(JSON.stringify(obj));
 };
 exports.default = deepClone;
-console.log(deepClone);
 //# sourceMappingURL=index.js.map

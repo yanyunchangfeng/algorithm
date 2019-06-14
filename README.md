@@ -16,15 +16,17 @@
 
 4. [质数判定](src/app/is-prime/index.ts)
 
-5. [数组去重](src/app/unique/index.ts)
+5. [数组去重](src/app/deep-clone/index.ts)
 
-5. [日历算法](src/app/calendar-algorithm/index.ts)
+6. [深度克隆](src/app/unique/index.ts)
 
-6. [生成随机数](src/app/random-number/index.ts)
+7. [日历算法](src/app/calendar-algorithm/index.ts)
 
-7. [颜色轮训算法](src/app/color-util/index.ts)
+8. [生成随机数](src/app/random-number/index.ts)
 
-7. [类的多重继承](src/app/multi-inherit/index.ts)
+9. [颜色轮训算法](src/app/color-util/index.ts)
+
+10. [类的多重继承](src/app/multi-inherit/index.ts)
 
 ## 下载
 ```
@@ -45,6 +47,7 @@
   algorithm.insertSort();
   algorithm.quickSort();
   algorithm.unique();
+  algorithm.deepClone();
   algorithm.isPrime();
   algorithm.getMonthData();
   algorithm.genColor();
@@ -57,6 +60,7 @@
  import quickSort    from 'yycf-algorithm/algorithm/quick-sort';
  import insertSort   from 'yycf-algorithm/algorithm/insert-sort';
  import unique       from 'yycf-algorithm/algorithm/unique';
+ import deepClone       from 'yycf-algorithm/algorithm/deep-clone';
  import isPrime      from 'yycf-algorithm/algorithm/is-prime';
  import getMonthData from 'yycf-algorithm/algorithm/calendar-algorithm';
  import color        from 'yycf-algorithm/algorithm/color-util';
@@ -67,6 +71,7 @@
  quickSort();
  insertSort();
  unique();
+ deepClone();
  isPrime();
  getMonthData();
  color.genColor();
@@ -145,23 +150,29 @@ npm t  or yarn test
 
 ## 我的个人博客  
 
-* [燕云长风](https://www.yanyunchangfeng.com) 
+* [燕云长风](https://yanyunchangfeng.com) 
 
 ## 我参与的系列项目
 
-1. [NiceFish]( https://gitee.com/mumu-osc/NiceFish)：美人鱼，这是一个微型Blog系统，前端基于Angular7.0 + PrimeNG7.1.0。（GVIP 码云最有价值的开源项目 3160 ☆)
+1. [NiceFish]( https://gitee.com/mumu-osc/NiceFish)：美人鱼，这是一个微型Blog系统，前端基于Angular7.0 + PrimeNG7.1.0。（GVIP 码云最有价值的开源项目 3207 ☆)
 2. [NiceFish-React]( https://gitee.com/mumu-osc/NiceFish-React)：这是React版的实现，和 NiceFish Angular 版本保持风格一致。采用React Hooks 16.8.3 版本，使用TypeScript、Ant Design组件库以及Bootstrap v4.2.1 开发。  (7 ☆)
-3. [OpenWMS-Frontend](https://gitee.com/mumu-osc/OpenWMS-Frontend)：OpenWMS项目前端基于 Angular 7.0 + PrimeNG 7.1.0。  (已推荐 199 ☆)
-4. [nicefish-spring-cloud](https://gitee.com/mumu-osc/nicefish-spring-cloud)：这是NiceFish的服务端代码，基于SpringCloud。已经完成了一些基本的功能，如 SpringSecurity+OAuth2+JWT 实现SSO，文章、用户、评论等的分页查询等。如果你需要与这个后端代码进行对接，请检出本项目的 for-spring-cloud 分支。 (已推荐 113 ☆)
+3. [OpenWMS-Frontend](https://gitee.com/mumu-osc/OpenWMS-Frontend)：OpenWMS项目前端基于 Angular 7.0 + PrimeNG 7.1.0。  (已推荐 201 ☆)
+4. [nicefish-spring-cloud](https://gitee.com/mumu-osc/nicefish-spring-cloud)：这是NiceFish的服务端代码，基于SpringCloud。已经完成了一些基本的功能，如 SpringSecurity+OAuth2+JWT 实现SSO，文章、用户、评论等的分页查询等。如果你需要与这个后端代码进行对接，请检出本项目的 for-spring-cloud 分支。 (已推荐 118 ☆)
  
 ## 我的社交主页  
 
-1. [燕云长风知乎](https://zhihu.com/people/hbxyxuxiaodong)  
-2. [燕云长风知乎专栏](https://zhuanlan.zhihu.com/yanyunchangfeng) 
-3. [燕云长风github](https://github.com/yanyunchangfeng)  
-4. [燕云长风gitee](https://gitee.com/yanyunchangfeng)  
-5. [燕云长风twitter](https://twitter.com/yanyunchangfeng)  
-6. [燕云长风medium](https://medium.com/@yanyunchangfeng)  
+1.  [燕云长风知乎](https://zhihu.com/people/hbxyxuxiaodong)  
+2.  [燕云长风知乎专栏](https://zhuanlan.zhihu.com/yanyunchangfeng) 
+3.  [燕云长风github](https://github.com/yanyunchangfeng)  
+4.  [燕云长风gitee](https://gitee.com/yanyunchangfeng)  
+5.  [燕云长风twitter](https://twitter.com/yanyunchangfeng)  
+6.  [燕云长风medium](https://medium.com/@yanyunchangfeng)  
+7.  [燕云长风facebook](https://facebook.com/yanyunchangfeng)  
+8.  [燕云长风stackoverflow](http://stackoverflow.com/users/11366314)  
+9.  [燕云长风npm](https://npmjs.com/~yanyunchangfeng)  
+10. [燕云长风linkedin](https://www.linkedin.com/in/yanyunchangfeng)  
+11. [燕云长风youtube](https://www.youtube.com/channel/UCaz2-l8Bd8tTBf1q-2ww7VA)  
+12. [燕云长风gmail](mailto:yanyunchangfeng@gamil.com)  
  
 ## 开源许可证
 
