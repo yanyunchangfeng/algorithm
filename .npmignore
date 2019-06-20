@@ -1,6 +1,7 @@
 # .npmignore 
 src
 config
+cypress
 docs
 .gitignore
 .gitattributes

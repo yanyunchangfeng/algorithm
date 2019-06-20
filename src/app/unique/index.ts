@@ -3,8 +3,10 @@
  * @params {[object Array]} arr [要去重的数组]
  * @return {[object Array]}     [新的去重后的数组]
  */
-
-const unique = (arr: any[]): any[] => {
+export interface uniqueFn<T>{
+    (arr:T):T
+}
+const unique:uniqueFn<any[]> = <T>(arr: any[]): T[] => {
     const result: any[] = [], hash: any[] = [];
 
     for (let i = 0; i < arr.length; i++) {
@@ -16,5 +18,4 @@ const unique = (arr: any[]): any[] => {
     return result;
  };
 
-export default unique;
-
+ export default unique

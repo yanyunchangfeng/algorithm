@@ -1,8 +1,9 @@
 {
   "name": "algorithm",
-  "version": "9.5.0",
+  "version": "9.7.0",
   "description": "1.冒泡算法 2.快速排序 3.插入排序,4数组去重,5.质数判定,6.日历算法,7.颜色轮训算法,8.类的多重继承 9.生成随机数",
-  "main": "srd/index.ts",
+  "main": "./algorithm/index.js",
+  "types": "./algorithm/index.d.ts",
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "24.0.13",

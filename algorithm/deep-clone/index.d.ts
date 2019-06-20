@@ -3,5 +3,8 @@
  * @param {[object Object]} obj [要深度拷贝的源对象]
  * @return {[object Object]}
  */
-declare const deepClone: (obj: object) => any;
+export interface deepCloneFn<T> {
+    (arg: T): T;
+}
+declare const deepClone: deepCloneFn<any>;
 export default deepClone;
