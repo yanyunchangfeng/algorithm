@@ -21,6 +21,19 @@ test("bubbleSort", () => {
     }
     //    类的多重继承实例
     class App extends mix(Base, Claculate, Interface, Timer) {
+        name:any;
+        cname:any;
+        issue:any;
+        omit:any;
+        el:any;
+        open_code:any;
+        open_code_list:any;
+        play_list:any;
+        number:any;
+        issue_el:any;
+        countdown_el:any;
+        state_el:any;
+        cur_play:any;
         constructor(name = "sys", cname = "应用", issue = "**", state = "**") {
             super();
             this.name = name;

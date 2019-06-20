@@ -18,29 +18,6 @@ const insertSort = (arr: any[]): void => {
         arr[p + 1] = current; // 将current的值保存到p+1中
    }
 };
-
-const inser = (arr:any[]):void =>{
-   for(let i = 1 ;i<arr.length;i++){
-      let temp = arr[i];
-      let p = i-1;
-      while(temp < arr[p]){
-         arr[p+1] = arr[p];
-         p-- 
-      }
-      arr[p+1] =temp;
-   }
-}
-
-let tarr = [1,5,4,3,2,6,44,0];
-let darr = [1,5,4,3,2,6,44,22];
-console.time('i1')
-inser(tarr)
-console.log(tarr)
-console.timeEnd('i1')
-// console.time('i2')
-// insertSort(tarr)
-// console.log(tarr)
-// console.timeEnd('i2')
 export default insertSort;
 
 
