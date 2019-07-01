@@ -8,7 +8,7 @@ import multiInherit from "./multi-inherit";
 import quickSort from "./quick-sort";
 import ranNum from "./random-number";
 import unique from "./unique";
-
+import '../index.scss'
 export default {
     bubbleSort,
     quickSort,

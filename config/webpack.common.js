@@ -13,6 +13,41 @@ module.exports={
     module:{
         rules:[
             {
+                test: /\.html$/,
+                use: [
+                  {
+                    loader: "html-loader",
+                    options: { minimize: true }
+                  }
+                ]
+            },
+            {
+              test: /\.(png|jpg|gif)$/i,
+              use: [
+                {
+                  loader:'url-loader',
+                  options:{
+                    limit:10000
+                  }
+                }
+              ]
+            },
+            {
+              test: /\.svg$/,
+              loader: 'svg-url-loader'
+            },
+            {
+              test: /\.(woff|woff2|tff|eot|ttf)$/i,
+              use: [
+                {
+                  loader:'url-loader',
+                  options:{
+                    limit:10000
+                  }
+                }
+              ]
+            },
+            {
                 test:/\.ts$/,
                 loader:'ts-loader'
             }
