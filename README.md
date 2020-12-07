@@ -3,7 +3,7 @@
 </p>
 
 ##  介绍
-你好，我是徐晓东，笔名[燕云长风](https://www.yanyunchangfeng.com)。大漠穷秋于 2019-03-16 21:22 赠此笔名。   
+你好，我是徐晓东，笔名[燕云长风](https://yanyunchangfeng.github.io)。大漠穷秋于 2019-03-16 21:22 赠此笔名。   
 寓意：结合李白著名的边塞诗《关山月》取【燕云长风】—— 长风几万里，吹度玉门关。
 
 这是一系列的算法题，如下:
@@ -50,8 +50,8 @@
  isPrime();
  getMonthData();
  color.genColor();
- multiInherit.copyProperties();
- multiInherit.mix();
+ copyProperties();
+ mix();
  ranNum();
 
 ```
@@ -125,7 +125,7 @@ npm t  or yarn test
 
 ## 我的个人博客  
 
-* [燕云长风](https://yanyunchangfeng.com) 
+* [燕云长风](https://yanyunchangfeng.github.io) 
 
 ## 我参与的系列项目
 
