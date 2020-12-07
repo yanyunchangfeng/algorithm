@@ -40,7 +40,7 @@
 ## 使用
 
 ```
- import {bubbleSort,insertSort,quickSort,unique,deepClone,isPrime,getMonthData,genColor,copyProperities,mix} from 'yycf-algorithm';
+ import {bubbleSort,insertSort,quickSort,unique,deepClone,isPrime,getMonthData,genColor,copyProperties,mix} from 'yycf-algorithm';
  
  bubbleSort();
  quickSort();
