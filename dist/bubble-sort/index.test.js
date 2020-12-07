@@ -12,4 +12,3 @@ test("bubbleSort", function () {
     index_1.default(bubbleArr);
     expect(bubbleArr).toEqual(cloneArr);
 });
-//# sourceMappingURL=index.test.js.map

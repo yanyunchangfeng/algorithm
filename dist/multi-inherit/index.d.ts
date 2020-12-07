@@ -4,8 +4,6 @@
  * @param {[object object]} source [要拷贝的原对象]
  * @return {void}
  */
-declare const _default: {
-    copyProperties: (target: object, source: object) => void;
-    mix: (...mixins: any[]) => any;
-};
-export default _default;
+declare const copyProperties: (target: object, source: object) => void;
+declare const mix: (...mixins: any[]) => any;
+export { copyProperties, mix, };

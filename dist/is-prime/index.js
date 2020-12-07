@@ -50,4 +50,3 @@ var isPrime = (function () {
     };
 })();
 exports.default = isPrime;
-//# sourceMappingURL=index.js.map

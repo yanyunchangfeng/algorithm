@@ -21,4 +21,3 @@ var insertSort = function (arr) {
     }
 };
 exports.default = insertSort;
-//# sourceMappingURL=index.js.map

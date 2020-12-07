@@ -32,7 +32,7 @@ const genColor:genColorFn< any []> = <T>(arr: T[]): string[] => {
   }
   return color;
 };
-export default {
+export {
     baseColor,
     genColor,
 };

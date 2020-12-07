@@ -25,4 +25,3 @@ var quickSort = function (arr) {
     }
 };
 exports.default = quickSort;
-//# sourceMappingURL=index.js.map

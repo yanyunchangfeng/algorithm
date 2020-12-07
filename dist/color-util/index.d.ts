@@ -3,11 +3,9 @@
  * @param {[object Array]} arr [传入的数据集合]
  * @return {[object Array]}    [返回生成好的颜色集合]
  */
+declare const baseColor: string[];
 export interface genColorFn<T> {
     (arr: T): string[];
 }
-declare const _default: {
-    baseColor: string[];
-    genColor: genColorFn<any[]>;
-};
-export default _default;
+declare const genColor: genColorFn<any[]>;
+export { baseColor, genColor, };

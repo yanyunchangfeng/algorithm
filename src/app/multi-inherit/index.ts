@@ -23,7 +23,7 @@
     return Mix;
 };
 
- export default{
+ export {
     copyProperties,
     mix,
 };

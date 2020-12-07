@@ -1,10 +1,14 @@
 {
   "name": "yycf-algorithm",
-  "version": "9.8.1",
+  "version": "10.0.0",
   "description": "1.冒泡算法 2.快速排序 3.插入排序,4数组去重,5.质数判定,6.日历算法,7.颜色轮训算法,8.类的多重继承 9.生成随机数",
-  "main": "./algorithm/index.js",
-  "types": "./algorithm/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "dependencies": {},
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@types/jest": "24.0.13",
     "autoprefixer": "9.6.0",
@@ -33,6 +37,7 @@
   "scripts": {
     "start": "webpack-dev-server --env=dev ",
     "build": "webpack --env=prod ",
+    "build-p": "tsc -p tsconfig.json",
     "test": "jest --config=config/jest.config.js",
     "lint": "tslint -p tsconfig.json",
     "fix": "tslint --force --fix -p tsconfig.json",
@@ -46,6 +51,9 @@
     "yycf",
     "algorithm"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "author": "yanyunchangfeng <yanyunchangfeng@gmail.com> (https://github.com/yanyunchangfeng)",
   "license": "MIT"
 }

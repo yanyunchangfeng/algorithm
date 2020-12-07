@@ -48,4 +48,3 @@ var getMonthData = function (year, month) {
     return ret;
 };
 exports.default = getMonthData;
-//# sourceMappingURL=index.js.map

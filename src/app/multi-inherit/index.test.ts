@@ -1,6 +1,6 @@
-import inherit from "./index";
+import {mix} from "./index";
 test("bubbleSort", () => {
-    const mix = inherit.mix;
+    mix;
     class Base {
         constructor() { }
         public base() {

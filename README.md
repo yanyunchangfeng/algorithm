@@ -40,33 +40,8 @@
 ## 使用
 
 ```
- 1. 以对象方式引入所有方法
- import algorithm from 'yycf-algorithm/algorithm';
-
-  algorithm.bubbleSort();
-  algorithm.insertSort();
-  algorithm.quickSort();
-  algorithm.unique();
-  algorithm.deepClone();
-  algorithm.isPrime();
-  algorithm.getMonthData();
-  algorithm.genColor();
-  algorithm.copyProperities();
-  algorithm.mix();
-
- 2.按需引入
-
- import bubbleSort   from 'yycf-algorithm/algorithm/bubble-sort';
- import quickSort    from 'yycf-algorithm/algorithm/quick-sort';
- import insertSort   from 'yycf-algorithm/algorithm/insert-sort';
- import unique       from 'yycf-algorithm/algorithm/unique';
- import deepClone       from 'yycf-algorithm/algorithm/deep-clone';
- import isPrime      from 'yycf-algorithm/algorithm/is-prime';
- import getMonthData from 'yycf-algorithm/algorithm/calendar-algorithm';
- import color        from 'yycf-algorithm/algorithm/color-util';
- import multiInherit from 'yycf-algorithm/algorithm/multi-inherit';
- import ranNum       from 'yycf-algorithm/algorithm/random-number';
-
+ import {bubbleSort,insertSort,quickSort,unique,deepClone,isPrime,getMonthData,genColor,copyProperities,mix} from 'yycf-algorithm';
+ 
  bubbleSort();
  quickSort();
  insertSort();

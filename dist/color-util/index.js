@@ -16,6 +16,7 @@ var baseColor = [
     "#b3aa9b",
     "#042d4c"
 ];
+exports.baseColor = baseColor;
 var genColor = function (arr) {
     var color = [];
     var num = 0; // 指定从哪一个颜色下标处开始轮训
@@ -30,8 +31,4 @@ var genColor = function (arr) {
     }
     return color;
 };
-exports.default = {
-    baseColor: baseColor,
-    genColor: genColor,
-};
-//# sourceMappingURL=index.js.map
+exports.genColor = genColor;

@@ -15,6 +15,7 @@ var copyProperties = function (target, source) {
         }
     }
 };
+exports.copyProperties = copyProperties;
 // 类的多重继承方法
 var mix = function () {
     var mixins = [];
@@ -33,8 +34,4 @@ var mix = function () {
     }
     return Mix;
 };
-exports.default = {
-    copyProperties: copyProperties,
-    mix: mix,
-};
-//# sourceMappingURL=index.js.map
+exports.mix = mix;

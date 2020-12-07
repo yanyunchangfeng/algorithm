@@ -11,4 +11,3 @@ var unique = function (arr) {
     return result;
 };
 exports.default = unique;
-//# sourceMappingURL=index.js.map

@@ -10,4 +10,3 @@ var ranNum = function (min, max) {
     return Math.trunc(Math.random() * (max - min) + min);
 };
 exports.default = ranNum;
-//# sourceMappingURL=index.js.map

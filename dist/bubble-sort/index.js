@@ -33,4 +33,3 @@ var bubbleSort = function (arr) {
     }
 };
 exports.default = bubbleSort;
-//# sourceMappingURL=index.js.map

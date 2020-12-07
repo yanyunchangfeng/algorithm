@@ -15,7 +15,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var index_1 = require("./index");
 test("bubbleSort", function () {
-    var mix = index_1.default.mix;
+    index_1.mix;
     var Base = /** @class */ (function () {
         function Base() {
         }
@@ -66,8 +66,7 @@ test("bubbleSort", function () {
             return _this;
         }
         return App;
-    }(mix(Base, Claculate, Interface, Timer)));
+    }(index_1.mix(Base, Claculate, Interface, Timer)));
     var app = new App();
     expect(app.timer).toBeDefined;
 });
-//# sourceMappingURL=index.test.js.map
