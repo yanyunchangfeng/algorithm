@@ -16,9 +16,9 @@
 
 4. [质数判定](src/app/is-prime/index.ts)
 
-5. [数组去重](src/app/deep-clone/index.ts)
+5. [数组去重](src/app/unique/index.ts)
 
-6. [深度克隆](src/app/unique/index.ts)
+6. [深度克隆](src/app/deep-clone/index.ts)
 
 7. [日历算法](src/app/calendar-algorithm/index.ts)
 
