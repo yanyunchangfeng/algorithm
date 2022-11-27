@@ -1,12 +1,8 @@
 # .npmignore 
 src
 config
-cypress
-docs
 .gitignore
 .gitattributes
 tsconfig.json
-tslint.json
-cypress.json
+tsconfig.build.json
 webpack.config.js
-*.map
