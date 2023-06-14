@@ -2,9 +2,23 @@
   "name": "yycf-algorithm",
   "version": "11.0.0",
   "description": "1.冒泡算法 2.快速排序 3.插入排序,4数组去重,5.质数判定,6.日历算法,7.颜色轮训算法,8.类的多重继承 9.生成随机数",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "typesVersions": {
+    ">=4.2": {
+      "*": [
+        "dist/types/*"
+      ]
+    }
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "node": "./dist/cjs/index.js",
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js"
+    }
+  },
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve",
     "start-analyzer": "cross-env NODE_ENV=development ANALYZE=1  webpack serve",
@@ -20,7 +34,11 @@
     "build-css": "node-sass ./src/index.scss ./dist/index.css",
     "build": "npm run clean && npm run build-ts",
     "build-ts": "tsc -p tsconfig.build.json",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "build:umd": "cross-env NODE_ENV=production webpack build",
+    "build:esm": "tsc -p tsconfig.json --declaration --declarationDir dist/types -m es6 --outDir dist/esm",
+    "build:cjs": "tsc -p tsconfig.json -m commonjs --outDir dist/cjs",
+    "build-umd-esm-cjs": "npm run clean && npm run build:umd && npm run build:esm && npm run build:cjs"
   },
   "files": [
     "dist"

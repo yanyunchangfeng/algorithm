@@ -34,10 +34,14 @@ module.exports = {
   devtool: isDev ? "source-map" : false, //用于配置产物 Sourcemap 生成规则
   output: {
     // 配置产物输出路径、名称等；
-    path: path.join(process.cwd(), "docs"),
-    filename: "[name].[contenthash].js", //入口代码块文件名的生成规则
-    chunkFilename: "[name].[contenthash].js", //非入口模块的生成规则
+    path: path.join(process.cwd(), "dist/umd"),
+    // filename: "[name].[contenthash].js", //入口代码块文件名的生成规则
+    filename: "index.js", //入口代码块文件名的生成规则
+    // chunkFilename: "[name].[contenthash].js", //非入口模块的生成规则
     clean: true,
+    library: "CfAlgorithm",
+    libraryTarget: "umd",
+    umdNamedDefine: true,
   },
   optimization: {
     // 用于控制如何优化产物包体积，内置DeadCodeElimination、ScopeHoisting、代码混淆、代码压缩等功能
@@ -243,42 +247,42 @@ module.exports = {
           generateStatsFile: true, // 是否生成stats.json文件
         })
       : noop,
-    new htmlWebpackPlugin({
-      template: path.join(process.cwd(), "src/index.html"),
-      filename: "index.html",
-      chunks: ["main"], // 指定包含的代码块
-      favicon: path.join(process.cwd(), "src/assets/img/yanyunchangfeng.png"),
-    }),
-    isMultiplePage
-      ? new htmlWebpackPlugin({
-          template: path.join(process.cwd(), "src/index.html"),
-          filename: "modal.html",
-          chunks: ["modal"],
-          favicon: path.join(
-            process.cwd(),
-            "src/assets/img/yanyunchangfeng.png"
-          ),
-        })
-      : noop,
+    // new htmlWebpackPlugin({
+    //   template: path.join(process.cwd(), "src/index.html"),
+    //   filename: "index.html",
+    //   chunks: ["main"], // 指定包含的代码块
+    //   favicon: path.join(process.cwd(), "src/assets/img/yanyunchangfeng.png"),
+    // }),
+    // isMultiplePage
+    //   ? new htmlWebpackPlugin({
+    //       template: path.join(process.cwd(), "src/index.html"),
+    //       filename: "modal.html",
+    //       chunks: ["modal"],
+    //       favicon: path.join(
+    //         process.cwd(),
+    //         "src/assets/img/yanyunchangfeng.png"
+    //       ),
+    //     })
+    //   : noop,
     new webpack.DefinePlugin({
       AUTHOR: JSON.stringify("yanyunchangfeng"),
     }),
     new FriendlyErrorsWebpackPlugin(),
     // .日志太多太少都不美观
     // .可以修改stats
-    !isDev
-      ? new CopyPlugin({
-          patterns: [
-            {
-              from: path.resolve(process.cwd(), "src", "assets"),
-              to: path.resolve(process.cwd(), "docs"),
-            },
-          ],
-          options: {
-            concurrency: 100,
-          },
-        })
-      : noop,
+    // !isDev
+    //   ? new CopyPlugin({
+    //       patterns: [
+    //         {
+    //           from: path.resolve(process.cwd(), "src", "assets"),
+    //           to: path.resolve(process.cwd(), "docs"),
+    //         },
+    //       ],
+    //       options: {
+    //         concurrency: 100,
+    //       },
+    //     })
+    //   : noop,
     new webpack.IgnorePlugin({
       resourceRegExp: /^\.\/locale$/,
       contextRegExp: /moment$/,
@@ -292,12 +296,12 @@ module.exports = {
           root: __dirname, // 用于显示相对路径替代原有的绝对路径。
         })
       : noop,
-    !isDev
-      ? new MiniCssExtractPlugin({
-          filename: "[name].[contenthash].css",
-          chunkFilename: "[name].[contenthash].css",
-        })
-      : noop,
+    // !isDev
+    //   ? new MiniCssExtractPlugin({
+    //       filename: "[name].[contenthash].css",
+    //       chunkFilename: "[name].[contenthash].css",
+    //     })
+    //   : noop,
     !isDev ? new webpack.BannerPlugin("Copyright By yanyunchangfeng") : noop,
   ],
   infrastructureLogging: {
