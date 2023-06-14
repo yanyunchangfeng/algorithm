@@ -41,7 +41,7 @@
     "build-css": "node-sass ./src/index.scss ./dist/index.css",
     "build": "npm run clean && npm run build-ts",
     "build-ts": "tsc -p tsconfig.build.json",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "npm run build-umd-esm-cjs",
     "build:umd": "cross-env NODE_ENV=production webpack build",
     "build:esm": "tsc -p tsconfig.json --declaration --declarationDir dist/types -m es6 --outDir dist/esm",
     "build:cjs": "tsc -p tsconfig.json -m commonjs --outDir dist/cjs",
