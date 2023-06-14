@@ -1,6 +1,6 @@
 {
   "name": "yycf-algorithm",
-  "version": "11.0.0",
+  "version": "12.0.0",
   "description": "1.冒泡算法 2.快速排序 3.插入排序,4数组去重,5.质数判定,6.日历算法,7.颜色轮训算法,8.类的多重继承 9.生成随机数",
   "main": "index.js",
   "types": "index.d.ts",
@@ -17,6 +17,13 @@
       "node": "./dist/cjs/index.js",
       "require": "./dist/cjs/index.js",
       "default": "./dist/esm/index.js"
+    },
+    "./bubble-sort": {
+      "types": "./dist/types/utils/bubble-sort/index.d.ts",
+      "node": "./dist/cjs/utils/bubble-sort/index.js",
+      "require": "./dist/cjs/utils/bubble-sort/index.js",
+      "es2015": "./dist/esm/utils/bubble-sort/index.js",
+      "default": "./dist/esm5/utils/bubble-sort/index.js"
     }
   },
   "scripts": {
