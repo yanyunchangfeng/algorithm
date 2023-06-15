@@ -151,31 +151,31 @@ module.exports = {
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         type: "asset/resource",
-        use: [
-          {
-            loader: "image-webpack-loader",
-            options: {
-              // jpeg 压缩配置
-              mozjpeg: {
-                quality: 80,
-              },
-              optipng: {
-                enabled: false,
-              },
-              pngquant: {
-                quality: [0.65, 0.9],
-                speed: 4,
-              },
-              gifsicle: {
-                interlaced: false,
-              },
-              webp: {
-                quality: 75,
-              },
-              disable: isDev ? true : false,
-            },
-          },
-        ],
+        // use: [
+        //   {
+        //     loader: "image-webpack-loader",
+        //     options: {
+        //       // jpeg 压缩配置
+        //       mozjpeg: {
+        //         quality: 80,
+        //       },
+        //       optipng: {
+        //         enabled: false,
+        //       },
+        //       pngquant: {
+        //         quality: [0.65, 0.9],
+        //         speed: 4,
+        //       },
+        //       gifsicle: {
+        //         interlaced: false,
+        //       },
+        //       webp: {
+        //         quality: 75,
+        //       },
+        //       disable: isDev ? true : false,
+        //     },
+        //   },
+        // ],
         // 资源模块 对标file-loader
       },
       {
@@ -208,12 +208,6 @@ module.exports = {
         ],
       },
     ],
-    // noParse: /lodash/, //正则表达式
-    // module.noParse字段，可以用于配置哪些模块文件的内容不需要进行解析
-    // 不需要解析依赖(如无依赖)的第三方大型库等，可以通过这个字段来配置，以提高整体的构建速度
-    noParse(content) {
-      return /lodash/.test(content);
-    },
   },
   performance: !isDev //监控产物体积
     ? {
@@ -247,12 +241,18 @@ module.exports = {
           generateStatsFile: true, // 是否生成stats.json文件
         })
       : noop,
-    // new htmlWebpackPlugin({
-    //   template: path.join(process.cwd(), "src/index.html"),
-    //   filename: "index.html",
-    //   chunks: ["main"], // 指定包含的代码块
-    //   favicon: path.join(process.cwd(), "src/assets/img/yanyunchangfeng.png"),
-    // }),
+    isDev
+      ? new htmlWebpackPlugin({
+          template: path.join(process.cwd(), "src/index.html"),
+          filename: "index.html",
+          chunks: ["main"], // 指定包含的代码块
+          favicon: path.join(
+            process.cwd(),
+            "src/assets/img/yanyunchangfeng.png"
+          ),
+        })
+      : noop,
+    // 生产环境下注释掉避免打包umd模块生成html等资源 产物更加纯净
     // isMultiplePage
     //   ? new htmlWebpackPlugin({
     //       template: path.join(process.cwd(), "src/index.html"),

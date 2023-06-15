@@ -67,6 +67,12 @@
 | nicefish-springboot  | 用来示范前后端分离模式下，前端代码与后端服务的对接方式，已经完成了基线版本，并且在腾讯云上面做了实际的部署。代码仓库在这里： https://gitee.com/mumu-osc/nicefish-spring-boot ，腾讯云上的演示地址在这里： http://118.25.136.164 ，以此为基础，你可以继续开发出适合自己业务场景的代码。|
 | nicefish-springcloud  | 用来示范前后端分离模式下，前端代码与分布式后端服务的对接方式，即将完成，代码最近放出。|                                                            
 
+## 单元测试
+
+```
+   yarn test or npm run test 
+```    
+
 ## 打包分析
 
 ```
@@ -80,17 +86,14 @@
 yarn start
 
 
-//build可发布静态文件
-yarn build
+//build可打包各种模块规范
+yarn build-umd-esm-cjs
 
 //发布到 npm
 npm  publish
 ~~~
 ## 社交主页
-
-1. [燕云长风知乎](https://zhihu.com/people/hbxyxuxiaodong)
-2. [燕云长风 github](https://github.com/yanyunchangfeng)
-3. [燕云长风 gitee](https://gitee.com/yanyunchangfeng)
+* [燕云长风 github](https://github.com/yanyunchangfeng)
 
 
 ## 开源许可证

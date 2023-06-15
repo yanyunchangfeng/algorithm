@@ -1,6 +1,6 @@
 {
   "name": "yycf-algorithm",
-  "version": "12.0.0",
+  "version": "13.0.0",
   "description": "1.冒泡算法 2.快速排序 3.插入排序,4数组去重,5.质数判定,6.日历算法,7.颜色轮训算法,8.类的多重继承 9.生成随机数",
   "main": "index.js",
   "types": "index.d.ts",
@@ -17,9 +17,16 @@
       "node": "./dist/cjs/index.js",
       "require": "./dist/cjs/index.js",
       "default": "./dist/esm/index.js"
+    },
+    "./bubble-sort": {
+      "types": "./dist/types/bubble-sort/index.d.ts",
+      "node": "./dist/cjs/bubble-sort/index.js",
+      "require": "./dist/cjs/bubble-sort/index.js",
+      "default": "./dist/esm/bubble-sort/index.js"
     }
   },
   "scripts": {
+    "test": "jest",
     "start": "cross-env NODE_ENV=development webpack serve",
     "start-analyzer": "cross-env NODE_ENV=development ANALYZE=1  webpack serve",
     "start-unused": "cross-env NODE_ENV=development UNUSED=1  webpack serve",
@@ -31,19 +38,21 @@
     "generateAnalyzerFile": "cross-env NODE_ENV=production webpack --profile --json > stats.json",
     "analyzer": "webpack-bundle-analyzer --port 8888 ./docs/stats.json",
     "clean": "rimraf ./dist",
-    "build-css": "node-sass ./src/index.scss ./dist/index.css",
+    "build-css": "sass ./src/index.scss ./dist/index.css",
     "build": "npm run clean && npm run build-ts",
     "build-ts": "tsc -p tsconfig.build.json",
     "prepublishOnly": "npm run build-umd-esm-cjs",
     "build:umd": "cross-env NODE_ENV=production webpack build",
-    "build:esm": "tsc -p tsconfig.json --declaration --declarationDir dist/types -m es6 --outDir dist/esm",
-    "build:cjs": "tsc -p tsconfig.json -m commonjs --outDir dist/cjs",
-    "build-umd-esm-cjs": "npm run clean && npm run build:umd && npm run build:esm && npm run build:cjs"
+    "build:esm": "tsc -p tsconfig.build.json -m es6 --outDir dist/esm",
+    "build:cjs": "tsc -p tsconfig.build.json -m commonjs --outDir dist/cjs",
+    "build-umd-esm-cjs": "npm run test && npm run clean && npm run build:umd && npm run build:esm && npm run build:cjs"
   },
   "files": [
     "dist"
   ],
   "devDependencies": {
+    "@types/jest": "29.5.2",
+    "@types/node": "^20.3.1",
     "@types/webpack-env": "1.16.3",
     "copy-webpack-plugin": "10.2.4",
     "cross-env": "7.0.3",
@@ -54,7 +63,7 @@
     "html-loader": "4.1.0",
     "html-minimizer-webpack-plugin": "4.1.0",
     "html-webpack-plugin": "5.5.0",
-    "image-webpack-loader": "8.1.0",
+    "jest": "29.5.0",
     "mini-css-extract-plugin": "2.6.0",
     "sass": "1.49.11",
     "sass-loader": "12.6.0",
@@ -62,7 +71,9 @@
     "style-loader": "3.3.1",
     "terser-webpack-plugin": "5.3.1",
     "thread-loader": "3.0.4",
+    "ts-jest": "29.1.0",
     "ts-loader": "9.2.8",
+    "ts-node": "10.9.1",
     "typescript": "4.6.3",
     "unused-webpack-plugin": "2.4.0",
     "webpack": "5.71.0",
