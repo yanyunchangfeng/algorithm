@@ -4,8 +4,5 @@
  * @param  {number} max  [最大范围]
  * @return {number} [生成一个min-max 的随机数]
  */
-const ranNum = (min: number, max: number): number => {
-  return Math.trunc(Math.random() * (max - min) + min);
-};
-
+declare const ranNum: (min: number, max: number) => number;
 export default ranNum;

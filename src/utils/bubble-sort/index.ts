@@ -5,13 +5,13 @@
  */
 
 const basicBubbleSort = (arr: any[]): void => {
-   for (let i = 1; i < arr.length; i++) {
-       for (let j = 0; j < arr.length - i; j++) {
-           if (arr[j] > arr[j + 1]) {
-               arr[j] = [ arr[j + 1] , arr[j + 1] = arr[j] ][0];
-           }
-       }
-   }
+  for (let i = 1; i < arr.length; i++) {
+    for (let j = 0; j < arr.length - i; j++) {
+      if (arr[j] > arr[j + 1]) {
+        arr[j] = [arr[j + 1], (arr[j + 1] = arr[j])][0];
+      }
+    }
+  }
 };
 /*
 * 优化后的冒泡算法
@@ -20,16 +20,16 @@ const basicBubbleSort = (arr: any[]): void => {
   [稳定性  稳定]
 */
 const bubbleSort = (arr: any[]): void => {
-   let len = arr.length, change = true;
-   for (let i = 1 ; i < len && change; i++) {
-      change = false;
-      for (let j = 0; j < len - i; j++) {
-        if (arr[j] > arr[j + 1]) {
-            arr[j] = [arr[j + 1], arr[j + 1] = arr[j]][0];
-            change = true;
-        }
+  let len = arr.length,
+    change = true;
+  for (let i = 1; i < len && change; i++) {
+    change = false;
+    for (let j = 0; j < len - i; j++) {
+      if (arr[j] > arr[j + 1]) {
+        arr[j] = [arr[j + 1], (arr[j + 1] = arr[j])][0];
+        change = true;
       }
-   }
+    }
+  }
 };
 export default bubbleSort;
-

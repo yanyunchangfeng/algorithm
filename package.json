@@ -17,13 +17,6 @@
       "node": "./dist/cjs/index.js",
       "require": "./dist/cjs/index.js",
       "default": "./dist/esm/index.js"
-    },
-    "./bubble-sort": {
-      "types": "./dist/types/utils/bubble-sort/index.d.ts",
-      "node": "./dist/cjs/utils/bubble-sort/index.js",
-      "require": "./dist/cjs/utils/bubble-sort/index.js",
-      "es2015": "./dist/esm/utils/bubble-sort/index.js",
-      "default": "./dist/esm5/utils/bubble-sort/index.js"
     }
   },
   "scripts": {

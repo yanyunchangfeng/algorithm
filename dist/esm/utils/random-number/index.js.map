@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../src/utils/random-number/index.ts"],"names":[],"mappings":"AAAA;;;;;GAKG;AACH,MAAM,MAAM,GAAG,CAAC,GAAW,EAAE,GAAW,EAAU,EAAE;IAChD,OAAO,IAAI,CAAC,KAAK,CAAC,IAAI,CAAC,MAAM,EAAE,GAAG,CAAC,GAAG,GAAG,GAAG,CAAC,GAAG,GAAG,CAAE,CAAC;AAC1D,CAAC,CAAC;AAEF,eAAe,MAAM,CAAC"}

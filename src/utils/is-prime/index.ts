@@ -12,12 +12,16 @@
  */
 
 const basicIsPrime = (num: number): boolean => {
-   if (num <= 3) {return true; } else {
-       for (let i = 2; i < Math.sqrt(num); i++) {
-           if (num % i === 0) {return false; }
-       }
-       return true;
-   }
+  if (num <= 3) {
+    return true;
+  } else {
+    for (let i = 2; i < Math.sqrt(num); i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
 };
 
 /**
@@ -27,20 +31,21 @@ const basicIsPrime = (num: number): boolean => {
  */
 
 const isPrime = (() => {
-     const hash: any[] = [];
-     return (num: number): boolean => {
-         if (num <= 3) { return true; } else if (hash[num] !== undefined) {
-             return true;
-         } else {
-             for (let i = 2 ; i < Math.sqrt(num); i++) {
-                 if (num % i === 0) {
-                     return false;
-                 }
-             }
-             hash[num] = true;
-             return true;
-         }
-     };
+  const hash: any[] = [];
+  return (num: number): boolean => {
+    if (num <= 3) {
+      return true;
+    } else if (hash[num] !== undefined) {
+      return true;
+    } else {
+      for (let i = 2; i < Math.sqrt(num); i++) {
+        if (num % i === 0) {
+          return false;
+        }
+      }
+      hash[num] = true;
+      return true;
+    }
+  };
 })();
 export default isPrime;
-
