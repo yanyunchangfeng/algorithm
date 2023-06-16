@@ -5,5 +5,5 @@
  * @return {void}
  */
 declare const copyProperties: (target: object, source: object) => void;
-declare const mix: <T extends new () => T>(...mixins: T[]) => T;
+declare const mix: <T extends new () => T>(...mixins: InstanceType<T>[]) => T;
 export { copyProperties, mix };

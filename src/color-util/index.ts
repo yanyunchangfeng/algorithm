@@ -16,15 +16,18 @@ const baseColor = [
   "#042d4c",
 ];
 
-const genColor = <T>(arr: T[]): string[] => {
+const genColor = <T>(
+  arr: T[],
+  defaultColor: string[] = baseColor
+): string[] => {
   const color: string[] = [];
   let num = 0; // 指定从哪一个颜色下标处开始轮训
   for (let i = 0; i < arr.length; i++) {
-    if (num < baseColor.length) {
-      color[i] = baseColor[num++];
+    if (num < defaultColor.length) {
+      color[i] = defaultColor[num++];
     } else {
       num = 0;
-      color[i] = baseColor[num++];
+      color[i] = defaultColor[num++];
     }
   }
   return color;

@@ -15,7 +15,7 @@ const basicIsPrime = (num: number): boolean => {
   if (num <= 3) {
     return true;
   } else {
-    for (let i = 2; i < Math.sqrt(num); i++) {
+    for (let i = 2; i <= Math.sqrt(num); i++) {
       if (num % i === 0) {
         return false;
       }
@@ -38,7 +38,7 @@ const isPrime = (() => {
     } else if (hash[num] !== undefined) {
       return true;
     } else {
-      for (let i = 2; i < Math.sqrt(num); i++) {
+      for (let i = 2; i <= Math.sqrt(num); i++) {
         if (num % i === 0) {
           return false;
         }

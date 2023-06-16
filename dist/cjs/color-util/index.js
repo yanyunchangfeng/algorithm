@@ -18,16 +18,17 @@ var baseColor = [
     "#042d4c",
 ];
 exports.baseColor = baseColor;
-var genColor = function (arr) {
+var genColor = function (arr, defaultColor) {
+    if (defaultColor === void 0) { defaultColor = baseColor; }
     var color = [];
     var num = 0; // 指定从哪一个颜色下标处开始轮训
     for (var i = 0; i < arr.length; i++) {
-        if (num < baseColor.length) {
-            color[i] = baseColor[num++];
+        if (num < defaultColor.length) {
+            color[i] = defaultColor[num++];
         }
         else {
             num = 0;
-            color[i] = baseColor[num++];
+            color[i] = defaultColor[num++];
         }
     }
     return color;

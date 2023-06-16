@@ -1,6 +1,6 @@
 {
   "name": "yycf-algorithm",
-  "version": "13.0.0",
+  "version": "14.0.0",
   "description": "1.冒泡算法 2.快速排序 3.插入排序,4数组去重,5.质数判定,6.日历算法,7.颜色轮训算法,8.类的多重继承 9.生成随机数",
   "main": "index.js",
   "types": "index.d.ts",
@@ -42,7 +42,7 @@
     "build": "npm run clean && npm run build-ts",
     "build-ts": "tsc -p tsconfig.build.json",
     "prepublishOnly": "npm run build-umd-esm-cjs",
-    "build:umd": "cross-env NODE_ENV=production webpack build",
+    "build:umd": "cross-env NODE_ENV=production UMD_LIBRARY=CfAlgorithm webpack build",
     "build:esm": "tsc -p tsconfig.build.json -m es6 --outDir dist/esm",
     "build:cjs": "tsc -p tsconfig.build.json -m commonjs --outDir dist/cjs",
     "build-umd-esm-cjs": "npm run test && npm run clean && npm run build:umd && npm run build:esm && npm run build:cjs"

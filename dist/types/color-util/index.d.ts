@@ -4,5 +4,5 @@
  * @return {[object Array]}    [返回生成好的颜色集合]
  */
 declare const baseColor: string[];
-declare const genColor: <T>(arr: T[]) => string[];
+declare const genColor: <T>(arr: T[], defaultColor?: string[]) => string[];
 export { baseColor, genColor };

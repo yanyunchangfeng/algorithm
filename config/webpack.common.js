@@ -12,11 +12,12 @@ const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 const webpackBar = require("webpackbar");
-const { NODE_ENV, ANALYZE, UNUSED, MULTIPLE } = process.env;
+const { NODE_ENV, ANALYZE, UNUSED, MULTIPLE, UMD_LIBRARY } = process.env;
 const isDev = NODE_ENV === "development";
 isAnalyzerMode = ANALYZE === "1";
 isUnusedMode = UNUSED === "1";
 isMultiplePage = MULTIPLE === "1";
+
 const noop = () => {};
 // module.exports = smw.wrap({ //需要包裹一层配置对象
 module.exports = {
@@ -32,17 +33,21 @@ module.exports = {
         main: "./src/index.ts",
       },
   devtool: isDev ? "source-map" : false, //用于配置产物 Sourcemap 生成规则
-  output: {
-    // 配置产物输出路径、名称等；
-    path: path.join(process.cwd(), "dist/umd"),
-    // filename: "[name].[contenthash].js", //入口代码块文件名的生成规则
-    filename: "index.js", //入口代码块文件名的生成规则
-    // chunkFilename: "[name].[contenthash].js", //非入口模块的生成规则
-    clean: true,
-    library: "CfAlgorithm",
-    libraryTarget: "umd",
-    umdNamedDefine: true,
-  },
+  output: !UMD_LIBRARY
+    ? {
+        // 配置产物输出路径、名称等；
+        path: path.join(process.cwd(), "docs"),
+        filename: "[name].[contenthash].js", //入口代码块文件名的生成规则
+        chunkFilename: "[name].[contenthash].js", //非入口模块的生成规则
+        clean: true,
+      }
+    : {
+        path: path.join(process.cwd(), "dist/umd"),
+        filename: "index.js",
+        clean: true,
+        library: UMD_LIBRARY,
+        libraryTarget: "umd",
+      },
   optimization: {
     // 用于控制如何优化产物包体积，内置DeadCodeElimination、ScopeHoisting、代码混淆、代码压缩等功能
     // moduleIds: 'natural', named  deterministic size // 模块名称的生成规则 deterministic 生产模式默认值
@@ -105,7 +110,7 @@ module.exports = {
     // 用于配置模块路径解析规则，可用于帮助Webpack更精确、高效地找到指定模块
     modules: [path.resolve("node_modules")], // 解析第三方包
     extensions: [".ts", ".tsx", ".js", ".css", ".less", ".scss", ".json"], // 文件后缀名 先后顺序查找
-    mainFields: ["browser", "module", "main", "style"], // eg: bootstrap 先找package.json 的style字段 没有的话再找main字段
+    mainFields: ["jsnext:main", "browser", "module", "main", "style"], // 优先使用 jsnext:main 中指向的 ES6 模块化语法的文件
     mainFiles: ["index"], // 入口文件的名字 默认是index
     alias: {
       // 别名  注意tsconfig.json˙中的paths也要对应配置
@@ -119,7 +124,7 @@ module.exports = {
     mainFields: ["loader", "main"],
   },
   experiments: {
-    topLevelAwait: true, // 此处为新增配置
+    topLevelAwait: true,
     asyncWebAssembly: true,
     lazyCompilation: isDev ? true : false, // 按需编译
   },
@@ -175,7 +180,7 @@ module.exports = {
         //       disable: isDev ? true : false,
         //     },
         //   },
-        // ],
+        // ],// 如需优化压缩图片资源请安装此loader
         // 资源模块 对标file-loader
       },
       {
@@ -241,7 +246,7 @@ module.exports = {
           generateStatsFile: true, // 是否生成stats.json文件
         })
       : noop,
-    isDev
+    !UMD_LIBRARY
       ? new htmlWebpackPlugin({
           template: path.join(process.cwd(), "src/index.html"),
           filename: "index.html",
@@ -252,37 +257,38 @@ module.exports = {
           ),
         })
       : noop,
-    // 生产环境下注释掉避免打包umd模块生成html等资源 产物更加纯净
-    // isMultiplePage
-    //   ? new htmlWebpackPlugin({
-    //       template: path.join(process.cwd(), "src/index.html"),
-    //       filename: "modal.html",
-    //       chunks: ["modal"],
-    //       favicon: path.join(
-    //         process.cwd(),
-    //         "src/assets/img/yanyunchangfeng.png"
-    //       ),
-    //     })
-    //   : noop,
+    isMultiplePage
+      ? new htmlWebpackPlugin({
+          template: path.join(process.cwd(), "src/index.html"),
+          filename: "modal.html",
+          chunks: ["modal"],
+          favicon: path.join(
+            process.cwd(),
+            "src/assets/img/yanyunchangfeng.png"
+          ),
+        })
+      : noop,
     new webpack.DefinePlugin({
       AUTHOR: JSON.stringify("yanyunchangfeng"),
     }),
     new FriendlyErrorsWebpackPlugin(),
     // .日志太多太少都不美观
     // .可以修改stats
-    // !isDev
-    //   ? new CopyPlugin({
-    //       patterns: [
-    //         {
-    //           from: path.resolve(process.cwd(), "src", "assets"),
-    //           to: path.resolve(process.cwd(), "docs"),
-    //         },
-    //       ],
-    //       options: {
-    //         concurrency: 100,
-    //       },
-    //     })
-    //   : noop,
+    !isDev
+      ? !UMD_LIBRARY
+        ? new CopyPlugin({
+            patterns: [
+              {
+                from: path.resolve(process.cwd(), "src", "assets"),
+                to: path.resolve(process.cwd(), "docs"),
+              },
+            ],
+            options: {
+              concurrency: 100,
+            },
+          })
+        : noop
+      : noop,
     new webpack.IgnorePlugin({
       resourceRegExp: /^\.\/locale$/,
       contextRegExp: /moment$/,
@@ -296,12 +302,12 @@ module.exports = {
           root: __dirname, // 用于显示相对路径替代原有的绝对路径。
         })
       : noop,
-    // !isDev
-    //   ? new MiniCssExtractPlugin({
-    //       filename: "[name].[contenthash].css",
-    //       chunkFilename: "[name].[contenthash].css",
-    //     })
-    //   : noop,
+    !isDev
+      ? new MiniCssExtractPlugin({
+          filename: "[name].[contenthash].css",
+          chunkFilename: "[name].[contenthash].css",
+        })
+      : noop,
     !isDev ? new webpack.BannerPlugin("Copyright By yanyunchangfeng") : noop,
   ],
   infrastructureLogging: {
@@ -313,4 +319,4 @@ module.exports = {
     //用于声明外部资源，Webpack 会直接忽略这部分资源，跳过这些资源的解析、打包操作
   },
 };
-// })
+// });

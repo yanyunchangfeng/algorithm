@@ -17,7 +17,7 @@ const copyProperties = (target: object, source: object): void => {
   }
 };
 // 类的多重继承方法
-const mix = <T extends new () => T>(...mixins: T[]): T => {
+const mix = <T extends new () => T>(...mixins: InstanceType<T>[]): T => {
   class Mix {}
   for (const mixin of mixins) {
     copyProperties(Mix, mixin);

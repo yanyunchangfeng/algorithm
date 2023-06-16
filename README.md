@@ -8,25 +8,25 @@
 
 这是一系列的算法题，如下:
 
-1. [冒泡算法](src/utils/bubble-sort/index.ts)   
+1. [冒泡算法](src/bubble-sort/index.ts)   
 
-2. [快速排序](src/utils/quick-sort/index.ts) 
+2. [快速排序](src/quick-sort/index.ts) 
 
-3. [插入排序](src/utils/insert-sort/index.ts)
+3. [插入排序](src/insert-sort/index.ts)
 
-4. [质数判定](src/utils/is-prime/index.ts)
+4. [质数判定](src/is-prime/index.ts)
 
-5. [数组去重](src/utils/unique/index.ts)
+5. [数组去重](src/unique/index.ts)
 
-6. [深度克隆](src/utils/deep-clone/index.ts)
+6. [深度克隆](src/deep-clone/index.ts)
 
-7. [日历算法](src/utils/calendar-algorithm/index.ts)
+7. [日历算法](src/calendar-algorithm/index.ts)
 
-8. [生成随机数](src/utils/random-number/index.ts)
+8. [生成随机数](src/random-number/index.ts)
 
-9. [颜色轮训算法](src/utils/color-util/index.ts)
+9. [颜色轮训算法](src/color-util/index.ts)
 
-10. [类的多重继承](src/utils/multi-inherit/index.ts)
+10. [类的多重继承](src/multi-inherit/index.ts)
 
 ## 下载
 ```
@@ -40,7 +40,7 @@
 ## 使用
 
 ```
- import {bubbleSort,insertSort,quickSort,unique,deepClone,isPrime,getMonthData,genColor,copyProperties,mix} from 'yycf-algorithm';
+ import {bubbleSort,insertSort,quickSort,unique,deepClone,isPrime,getMonthData,genColor,copyProperties,mom 'yycf-algorithm';
  
  bubbleSort();
  quickSort();

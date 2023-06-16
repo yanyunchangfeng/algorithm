@@ -14,7 +14,7 @@ var basicIsPrime = function (num) {
         return true;
     }
     else {
-        for (var i = 2; i < Math.sqrt(num); i++) {
+        for (var i = 2; i <= Math.sqrt(num); i++) {
             if (num % i === 0) {
                 return false;
             }
@@ -37,7 +37,7 @@ var isPrime = (function () {
             return true;
         }
         else {
-            for (var i = 2; i < Math.sqrt(num); i++) {
+            for (var i = 2; i <= Math.sqrt(num); i++) {
                 if (num % i === 0) {
                     return false;
                 }
