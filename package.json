@@ -1,6 +1,6 @@
 {
   "name": "yycf-algorithm",
-  "version": "14.0.0",
+  "version": "14.0.1",
   "description": "1.冒泡算法 2.快速排序 3.插入排序,4数组去重,5.质数判定,6.日历算法,7.颜色轮训算法,8.类的多重继承 9.生成随机数",
   "main": "index.js",
   "types": "index.d.ts",
